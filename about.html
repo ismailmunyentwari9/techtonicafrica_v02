@@ -6,111 +6,283 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>About</title>
 </head>
 
 <body class="bg-[#1E1E1E]">
-    <nav class="mx-auto w-[100%] lg:flex justify-between md:row hidden p-[2%] bg-[#202931] shadow-lg">
-        <div class="logo transform hover:scale-110 transition duration-500 ease-in-out">
-            <a href="./index.html"> <img src="./assets/logo.png" alt=""
-                    class="hover:rotate-6 transition duration-500 ease-in-out"></a>
+    <!-- Navbar -->
+    <nav class="w-full bg-[#202931] shadow-lg fixed top-0 z-50 ">
+        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="logo transform hover:scale-110 transition duration-500 ease-in-out">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="Logo" class="hover:rotate-6 transition duration-500 ease-in-out">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <div id="menu" class="lg:flex hidden flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                <ul class="text-white flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                    <li><a href="./index.html" class="nav-item">Home</a></li>
+                    <li><a href="./about.html" class="nav-item">About Program</a></li>
+                    <li><a href="./pricing.html" class="nav-item">Pricing</a></li>
+                    <li><a href="./Courses.html" class="nav-item">Courses</a></li>
+                    <li><a href="./contact.html" class="nav-item">Contact</a></li>
+                </ul>
+                <div class="log-buttons text-white flex gap-6 lg:gap-12 items-center mt-4 lg:mt-0">
+                    <a href="./login.html">
+                        <button
+                            class="border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Login
+                        </button>
+                    </a>
+                    <a href="./signup.html">
+                        <button
+                            class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Become a member
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <ul class="text-white flex gap-12 items-center">
-           <a href="./index.html">
-            <li
-            class="text-[#BA589F] hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#BA589F] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-            Home</li>
-           </a>
-            <a href="./about.html">
-                <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                About Program</li>
+
+        <!-- Hidden menu for small screens -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-[#202931] text-white flex flex-col items-start p-4 space-y-4">
+            <a href="./index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">About Program</a>
+            <a href="./pricing.html" class="nav-item">Pricing</a>
+            <a href="./Courses.html" class="nav-item">Courses</a>
+            <a href="./contact.html" class="nav-item">Contact</a>
+            <a href="./login.html">
+                <button
+                    class="w-full border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Login
+                </button>
             </a>
-            <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                Reviews</li>
-            <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                Pricing</li>
-            <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                Contact</li>
-        </ul>
-        <div class="log-buttons text-white flex gap-12 items-center">
-            <button
-                class="border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">Login</button>
-            <button
-                class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">Become
-                member</button>
+            <a href="./signup.html">
+                <button
+                    class="w-full bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Become a member
+                </button>
+            </a>
         </div>
     </nav>
 
-             <main>
-                <section class="upper-class w-[80%] mx-auto flex items-center justify-between flex-col gap-8 mt-[8%]">
-                       <h1 class="font-[700] text-3xl text-white text-center">Start a rewarding career in software development today!</h1>
-                       <p class="text-xl text-white text-center w-[40%]">You'll engage in the fascinating world of programming to create innovative solutions and bring concepts to life through code.</p>
-                </section>
-                <section class="second-section flex">
-                    <div>
-                        span
-                    </div>
-                    <div></div>
-                </section>
-             </main>
-
-        <footer class="bg-[#202931] text-white py-10">
-            <div class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Contact Information -->
-                <div class="contact-info flex flex-col gap-3">
-                    <h3 class="text-[#BA589F] text-xl font-bold">Contact Information</h3>
-                    <p>Norsken House, KG 19 Ave, Kigali, Rwanda</p>
-                    <p>+250 791 430 175</p>
-                    <p>info@techtonicafrica.com</p>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="quick-links flex flex-col gap-3">
-                    <h3 class="text-[#BA589F] text-xl font-bold">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Home</a></li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">About
-                                Program</a></li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Reviews</a>
-                        </li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Pricing</a>
-                        </li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Follow Us -->
-                <div class="follow-us flex flex-col gap-3">
-                    <h3 class="text-[#BA589F] text-xl font-bold">Socials</h3>
-                    <div class="social-icons flex space-x-4">
-                        <a href="#" class=" text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
-                            <i class="fa fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+    <main>
+        <section
+            class="upper-class lg:pt-[10%]  md:pt-[15%] sm:pt-[20%] pt-[30%] w-full mx-auto flex flex-col items-center justify-center gap-6 text-center py-24 rounded-lg shadow-lg bg-cover bg-center relative"
+            style="background-image: url('./assets/bg-about.webp');">
+            <div class="absolute inset-0 bg-black opacity-70 rounded-lg"></div>
+            <div class="relative z-10 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto text-white">
+                <h1 class="font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-6xl leading-tight">Start a Rewarding
+                    Career in Software Development Today!</h1>
+                <p class="lg:text-base text-start  text-md md:text-lg lg:text-xl mt-4">Engage in the fascinating world
+                    of programming, where every line of code is an opportunity to create something new and impactful.
+                    Dive deep into innovative problem-solving, and turn abstract concepts into tangible solutions that
+                    make a difference.</p>
+                <a href="#real-project"
+                    class="mt-8 lg:text-lg md:text-md text-sm inline-block lg:px-6 px-3   py-3 bg-[#BA589F] hover:bg-white hover:text-[#BA589F] text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out">Learn
+                    More</a>
             </div>
-            <!-- Copyright -->
-            <div class="text-center text-sm mt-10 text-gray-400">
-                © 2024 Tech Tonic Africa. All rights reserved.
+        </section>
+
+
+
+
+        <section
+            class="second-section flex flex-col md:flex-row w-[95%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center gap-8 mt-8">
+            <div class="flex order-2 lg:order-1 md:order-1 flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
+                <div class="w-[50px] h-[50px] bg-black rounded-full flex justify-center items-center mx-auto md:mx-0">
+                    <i class="fa fa-clock-o text-[#7F53B6] text-3xl"></i>
+                </div>
+                <h2 class="text-[#7F53B6] font-bold text-xl md:text-2xlb">Early Career Readiness:</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">No fluff, just the good stuff!</h2>
+                <p id="real-project"
+                    class="text-white font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                    Our program offers students aged 15-18 the opportunity to gain practical experience in coding and
+                    software development before they are legally eligible to work. Through structured lessons and
+                    real-world projects, students develop essential technical skills and gain hands-on experience. They
+                    also receive guidance on industry best practices, participate in collaborative team projects, and
+                    have access to mentorship from experienced professionals.
+                </p>
             </div>
-        </footer>
+            <div class="w-full md:w-1/2 order-1 lg:order-2 md:order-2">
+                <img class="object-cover w-full h-auto transform hover:scale-105 transition duration-500 ease-in-out"
+                    src="./assets/Rectangle 35.png" alt="course-contents">
+            </div>
+        </section>
+
+
+        <section
+            class="third-section flex flex-col md:flex-row w-[90%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center gap-8 mt-8">
+            <div class="w-full md:w-1/2 lg:w-1/2">
+                <img class="object-cover w-full h-auto transform hover:scale-105 transition duration-500 ease-in-out"
+                    src="./assets/Rectangle 36.png" alt="course-contents">
+            </div>
+            <div class="flex flex-col gap-4 w-full md:w-2/3 text-center md:text-left">
+                <div class="w-[50px] h-[50px] bg-black rounded-full flex justify-center items-center mx-auto md:mx-0">
+                    <i class="fa fa-map-o text-[#7F53B6] text-3xl"></i>
+                </div>
+                <h2 class="text-[#7F53B6] font-bold text-xl md:text-2xl">Admission Criteria:</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">We make your dreams come true!</h2>
+                <p
+                    class="text-white font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                    Students aged 15-18 with basic computer
+                    literacy skills and a strong interest in coding and software development are eligible to apply.
+                    Students aged 15-18 with basic computer literacy skills and a strong interest in coding and software
+                    development are eligible to apply. No prior experience is necessary, but a passion for technology is
+                    encouraged. No prior experience is necessary, but a passion for technology is encouraged.</p>
+            </div>
+        </section>
+
+
+        <section
+            class="second-section flex flex-col md:flex-row w-[95%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center gap-8 mt-8">
+            <div class="flex order-2 lg:order-1 md:order-1 flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
+                <div class="w-[50px] h-[50px] bg-black rounded-full flex justify-center items-center mx-auto md:mx-0">
+                    <i class="fa fa-suitcase text-[#7F53B6] text-3xl"></i>
+                </div>
+                <h2 class="text-[#7F53B6] font-bold text-xl md:text-2xl">Get ready for the job:</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">Real-world projects</h2>
+                <p
+                    class="text-white font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                    Through hands-on projects and industry partnerships, students develop the skills and professionalism
+                    necessary for future employment. They also gain valuable insights into real-world applications of
+                    their knowledge, helping them to build a strong foundation for a successful career in the tech
+                    industry. Additionally, students benefit from mentorship opportunities, networking events with
+                    industry professionals, and exposure to the latest tools and technologies, all of which enhance
+                    their readiness for future career challenges.</p>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/2 order-1 lg:order-2 md:order-2">
+                <img class="object-cover transform hover:scale-105 transition duration-500 ease-in-out"
+                    src="./assets/Rectangle 37.png" alt="course-contents">
+            </div>
+        </section>
+
+        <section
+            class="third-section flex flex-col md:flex-row w-[90%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center gap-8 mt-8">
+            <div class="w-full md:w-1/2 lg:w-1/2">
+                <img class="object-cover transform hover:scale-105 transition duration-500 ease-in-out"
+                    src="./assets/Rectangle 38.png" alt="course-contents">
+            </div>
+            <div class="flex flex-col gap-4 w-full md:w-2/3 text-center md:text-left">
+                <div class="w-[50px] h-[50px] bg-black rounded-full flex justify-center items-center mx-auto md:mx-0">
+                    <i class="fa fa-line-chart text-[#7F53B6] text-3xl"></i>
+                </div>
+                <h2 class="text-[#7F53B6] font-bold text-xl">From beginner to pro:</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">Program Structure and Curriculum:</h2>
+                <p
+                    class="text-white font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                    At TechTonicAfrica, our 9-month program guides students from basic to advanced skills, preparing
+                    them as full-stack developers. Over three levels, students first learn HTML, CSS, Tailwind CSS, and
+                    basic JavaScript. The second level covers advanced JavaScript, React.js, and an introduction to
+                    Node.js. In the final level, they deepen their Node.js knowledge, explore SQL and NoSQL databases,
+                    and complete full-stack projects. By the end, participants will have a comprehensive skill set for
+                    full-stack development.
+                </p>
+            </div>
+        </section>
+
+        <section
+            class="second-section flex flex-col md:flex-row w-[95%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center gap-8 mt-8">
+            <div class="flex order-2 lg:order-1 md:order-1 flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
+                <div class="w-[50px] h-[50px] bg-black rounded-full flex justify-center items-center mx-auto md:mx-0">
+                    <i class="fa fa-edit text-[#61CDB6] text-3xl"></i>
+                </div>
+                <h2 class="text-[#61CDB6]  font-bold text-xl">Enroll now:</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">Application Process:</h2>
+                <p
+                    class="text-white font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                    Ready to take the next step? Apply through our website by filling out the application form with all
+                    the exciting details about yourself. Once you hit "submit," our team will eagerly review your
+                    application and reach out to you via phone or email with the next thrilling steps. Don’t miss this
+                    opportunity—complete the form today and stay tuned for our exciting follow-up. We can’t wait to see
+                    what you bring to the table and help you embark on this amazing journey!</p>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/2 order-1 lg:order-2 md:order-2">
+                <img class="object-cover transform hover:scale-105 transition duration-500 ease-in-out"
+                    src="./assets/Rectangle 39.png" alt="course-contents">
+            </div>
+        </section>
 
     </main>
 
+
+    <footer class="bg-[#141B22] text-white py-10">
+        <div class="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Contact Information -->
+            <div class="contact-info flex flex-col gap-1">
+                <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Contact Information</h3>
+                <p class="text-sm md:text-base">Norsken House, KG 19 Ave, Kigali, Rwanda</p>
+                <p class="text-sm md:text-base">+250 791 430 175</p>
+                <p class="text-sm md:text-base">info@techtonicafrica.com</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links flex flex-col gap-3">
+                <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <a href="./index.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Home</li>
+                    </a>
+                    <a href="./about.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">About Program</li>
+                    </a>
+                    <a href="./pricing.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Pricing</li>
+                    </a>
+                    <a href="./courses.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Courses</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Contact</li>
+                    </a>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="follow-us flex flex-col gap-3">
+                <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Socials</h3>
+                <div class="social-icons flex space-x-4">
+                    <a href="#"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/techtonicafrica/"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-xs md:text-sm lg:text-base mt-10 text-gray-400">
+            © 2024 Tech Tonic Africa. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="./menu.js"></script>
 </body>
 
 </html>

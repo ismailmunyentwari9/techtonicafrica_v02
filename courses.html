@@ -1,0 +1,213 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Courses</title>
+</head>
+
+<body class="bg-[#1E1E1E]">
+     <!-- Navbar -->
+     <nav class="w-full bg-[#202931] shadow-lg fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="logo transform hover:scale-110 transition duration-500 ease-in-out">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="Logo" class="hover:rotate-6 transition duration-500 ease-in-out">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <div id="menu" class="lg:flex hidden flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                <ul class="text-white flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                    <li><a href="./index.html" class="nav-item">Home</a></li>
+                    <li><a href="./about.html" class="nav-item">About Program</a></li>
+                    <li><a href="./pricing.html" class="nav-item">Pricing</a></li>
+                    <li><a href="./Courses.html" class="nav-item">Courses</a></li>
+                    <li><a href="./contact.html" class="nav-item">Contact</a></li>
+                </ul>
+                <div class="log-buttons text-white flex gap-6 lg:gap-12 items-center mt-4 lg:mt-0">
+                    <a href="./login.html">
+                        <button class="border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Login
+                        </button>
+                    </a>
+                    <a href="./signup.html">
+                        <button class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Become a member
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden menu for small screens -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-[#202931] text-white flex flex-col items-start p-4 space-y-4">
+            <a href="./index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">About Program</a>
+            <a href="./pricing.html" class="nav-item">Pricing</a>
+            <a href="./Courses.html" class="nav-item">Courses</a>
+            <a href="./contact.html" class="nav-item">Contact</a>
+            <a href="./login.html">
+                <button class="w-full border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Login
+                </button>
+            </a>
+            <a href="./signup.html">
+                <button class="w-full bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Become a member
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="w-full mx-auto lg:pt-[10%]  md:pt-[15%] sm:pt-[20%] pt-[30%] flex flex-col items-center justify-center text-center py-24 bg-cover bg-center relative shadow-lg" 
+            style="background-image: url('./assets/bg-about.webp');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 flex justify-center flex-col items-center">
+                <h1 class="text-6xl text-white font-extrabold mb-4 animate-bounce">Our Courses</h1>
+                <p class="text-xl text-white mb-8 w-[60%] lg:text-center text-start">
+                    We offer a range of courses designed to give teenagers aged 15-18 real-world experience in technology. Currently, we provide comprehensive web application development training, and we're excited to introduce more tech courses soon. Explore our offerings below and get ready to embark on a learning journey that prepares you for the future!
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full md:w-4/5 lg:w-3/4 mx-auto py-[5%] flex flex-col gap-10">
+            <!-- Current Course: Web Development -->
+            <div class="w-full bg-[#202931] p-8 rounded-lg shadow-lg flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0">
+                    <i class="material-icons text-6xl text-[#BA589F]">code</i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-4xl text-[#BA589F] font-bold mb-4">Web Development Course</h2>
+                    <p class="text-lg text-white mb-4">
+                        This course is designed for anyone who wants to become an experienced full-stack developer. Dive into the world of web development with our hands-on approach, where you'll build web applications from scratch. Master the essentials of HTML, CSS, and JavaScript, along with advanced topics like responsive design and front-end frameworks. Gain practical experience with the tools and techniques needed to create dynamic and interactive websites, and develop the skills to bring your ideas to life online. Perfect for beginners, this course offers a comprehensive foundation to launch your web development journey and grow into a skilled full-stack developer.
+                    </p>
+                    <a href="./signup.html" class="text-lg bg-[#BA589F] text-white py-3 px-8 rounded-lg hover:bg-white hover:text-[#BA589F] transition-all duration-300">Enroll Now</a>
+                </div>
+            </div>
+
+            <!-- Upcoming Courses -->
+            <div class="w-full bg-[#202931] p-8 rounded-lg shadow-lg">
+                <h2 class="text-4xl text-[#BA589F] font-bold mb-4">Upcoming Courses</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <!-- Card 1: Embedded Systems -->
+                    <div class="bg-[#2A3A42] p-6 rounded-lg shadow-md flex flex-col items-center">
+                        <i class="material-icons text-5xl text-[#BA589F] mb-4">memory</i>
+                        <h3 class="text-xl text-[#BA589F] font-semibold mb-2">Embedded Systems</h3>
+                        <p class="text-white text-start">
+                            Learn about hardware and software integration to create embedded solutions for various applications by understanding how microcontrollers and microprocessors work together with sensors, actuators, and communication modules to control and manage device functions. This involves designing electronic circuits and PCBs, developing firmware using languages like C and C++, and employing real-time operating systems for efficient task management.
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Artificial Intelligence -->
+                    <div class="bg-[#2A3A42] p-6 rounded-lg shadow-md flex flex-col items-center">
+                        <i class="material-icons text-5xl text-[#BA589F] mb-4">smart_toy</i>
+                        <h3 class="text-xl text-[#BA589F] font-semibold mb-2">Artificial Intelligence</h3>
+                        <p class="text-white text-start">
+                            Dive into the world of AI, from machine learning algorithms to neural networks. Learn to build intelligent systems that can make decisions, recognize patterns, and predict future outcomes. Our course offers practical insights into AI technologies and applications, giving you the tools to create AI-driven solutions. With hands-on projects and expert guidance, you'll gain the skills to innovate in this rapidly evolving field.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Cybersecurity -->
+                    <div class="bg-[#2A3A42] p-6 rounded-lg shadow-md flex flex-col items-center">
+                        <i class="material-icons text-5xl text-[#BA589F] mb-4">security</i>
+                        <h3 class="text-xl text-[#BA589F] font-semibold mb-2">Cybersecurity</h3>
+                        <p class="text-white text-start">
+                            Understand the principles of cybersecurity by exploring threat detection, prevention, and securing digital assets. Learn how to identify and respond to potential threats, implement strategies to prevent security breaches, and safeguard valuable information through encryption, access controls, and risk management. Gain insights into maintaining the integrity, confidentiality, and availability of digital assets to protect systems and data from malicious attacks and vulnerabilities.
+                        </p>
+                    </div>
+
+                    <!-- Card 4: Virtual Reality -->
+                    <div class="bg-[#2A3A42] p-6 rounded-lg shadow-md flex flex-col items-center">
+                        <i class="material-icons text-5xl text-[#BA589F] mb-4">view_in_ar</i>
+                        <h3 class="text-xl text-[#BA589F] font-semibold mb-2">Virtual Reality</h3>
+                        <p class="text-white text-start">
+                            Get hands-on experience with VR development by creating immersive experiences and interactive environments. This involves learning how to design and build virtual worlds using VR tools and platforms, integrating interactive elements to engage users, and optimizing performance for a seamless experience. You'll gain practical skills in 3D modeling, spatial audio, and user interface design to bring your virtual environments to life and provide compelling, interactive experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<footer class="bg-[#141B22] text-white py-10">
+    <div class="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Contact Information -->
+        <div class="contact-info flex flex-col gap-1">
+            <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Contact Information</h3>
+            <p class="text-sm md:text-base">Norsken House, KG 19 Ave, Kigali, Rwanda</p>
+            <p class="text-sm md:text-base">+250 791 430 175</p>
+            <p class="text-sm md:text-base">info@techtonicafrica.com</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links flex flex-col gap-3">
+            <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Quick Links</h3>
+            <ul class="space-y-2">
+            <a href="./index.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Home</li></a>
+            <a href="./about.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">About Program</li></a>
+            <a href="./pricing.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Pricing</li></a>
+            <a href="./courses.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Courses</li></a>
+            <a href="./contact.html"> <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Contact</li></a>
+            </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="follow-us flex flex-col gap-3">
+            <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Socials</h3>
+            <div class="social-icons flex space-x-4">
+                <a href="#"
+                    class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                    class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/techtonicafrica/"
+                    class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#"
+                    class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-xs md:text-sm lg:text-base mt-10 text-gray-400">
+        © 2024 Tech Tonic Africa. All rights reserved.
+    </div>
+</footer>
+
+
+</body>
+<script>
+function toggleFaq(faqId) {
+    const faq = document.getElementById(`faq${faqId}`);
+    const arrow = document.getElementById(`arrow${faqId}`);
+    faq.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+}
+</script>
+<script src="./menu.js"></script>
+</body>
+
+</html>

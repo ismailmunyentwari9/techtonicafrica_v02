@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex min-h-screen lg:flex-row flex-col">
+
+
+        <!-- Right Side - Image Section with Go Back Button -->
+        <div class="relative w-full lg:w-1/2 flex justify-center items-center bg-[#1E1E1E] p-8 md:p-16 lg:p-24">
+            <!-- Go Back Button -->
+            <a href="./index.html"
+                class="absolute top-4 lg:text-xl md:text-md text-sm left-4 bg-[#BA589F] text-white px-4 py-2 rounded-lg hover:bg-[#ffff] transition-all hover:text-[#BA589F] duration-300">Go
+                Back</a>
+            <!-- Image -->
+            <img src="./assets/Rectangle-login.png" alt="Login Visual" class="w-[90%] h-auto object-cover">
+        </div>
+
+        <!-- Left Side - Login Form -->
+        <div class="w-full lg:w-1/2 w-full flex flex-col justify-center bg-white p-8 md:p-16 lg:p-24 shadow-lg">
+            <div class="lg:w-[85%] w-full border-2 border-[#1F272E] p-4 rounded-xl">
+                <h2 class="lg:text-xl md:text-md text-sm font-bold  w-[90%] mb-8 text-[#141B22] lg:text-start text-center">Unlock Creativity, Ignite Curiosity: Where
+                    <span class="text-[#7DAAF3]">TechTitans</span> Code Their Dreams!</h2>
+                <form action="./login_codes.php" method="POST">
+                    <div class="mb-6">
+
+                        <input type="text" id="Username" placeholder="User Name" name="names" required
+                            class="w-full px-4 py-1 border border-gray-300 lg:text-xl md:text-md text-sm rounded-md shadow-sm focus:ring-[#388AEB] focus:border-[#388AEB]">
+                    </div>
+                    <div class="mb-6">
+                        <input type="password" id="password" placeholder="Password" name="password" required
+                            class="w-full px-4 py-1 border border-gray-300 lg:text-xl md:text-md text-sm rounded-md shadow-sm focus:ring-[#388AEB] focus:border-[#388AEB]">
+                    </div>
+                    <div class="mb-6">
+
+                        <input type="password" id="confirmation-code" placeholder="Confirmation Code" name="pin"
+                            required
+                            class="w-full px-4 py-1 border border-gray-300 lg:text-xl md:text-md text-sm rounded-md shadow-sm focus:ring-[#388AEB] focus:border-[#388AEB]">
+                    </div>
+                    <button type="submit" name="send"
+                        class="w-full py-2 bg-[#BA589F] text-white rounded-lg hover:bg-[#141B22] transition-all duration-300 lg:text-xl md:text-md text-sm">Login</button>
+                </form>
+                <div class="mt-8">
+                    <p class="text-gray-600">Don't have an account? <a href="./signup.html"
+                            class="text-[#388AEB] hover:underline">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

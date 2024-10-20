@@ -6,128 +6,540 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Home</title>
 </head>
 
 <body class="bg-[#1E1E1E]">
-    <nav class="mx-auto w-[100%] lg:flex justify-between md:row hidden p-[2%] bg-[#202931] shadow-lg">
-        <div class="logo transform hover:scale-110 transition duration-500 ease-in-out">
-            <a href="./index.html"> <img src="./assets/logo.png" alt=""
-                    class="hover:rotate-6 transition duration-500 ease-in-out"></a>
+    <!-- Navbar -->
+    <nav class="w-full bg-[#202931] shadow-lg fixed top-0 z-50  ">
+        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="logo transform hover:scale-110 transition duration-500 ease-in-out">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="Logo" class="hover:rotate-6 transition duration-500 ease-in-out">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <div id="menu" class="lg:flex hidden flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                <ul class="text-white flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                    <li><a href="./index.html" class="nav-item">Home</a></li>
+                    <li><a href="./about.html" class="nav-item">About Program</a></li>
+                    <li><a href="./pricing.html" class="nav-item">Pricing</a></li>
+                    <li><a href="./Courses.html" class="nav-item">Courses</a></li>
+                    <li><a href="./contact.html" class="nav-item">Contact</a></li>
+                </ul>
+                <div class="log-buttons text-white flex gap-6 lg:gap-12 items-center mt-4 lg:mt-0">
+                    <a href="./login.html">
+                        <button
+                            class="border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Login
+                        </button>
+                    </a>
+                    <a href="./signup.html">
+                        <button
+                            class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Become a member
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <ul class="text-white flex gap-12 items-center">
-           <a href="./index.html">
-            <li
-            class="text-[#BA589F] hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#BA589F] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-            Home</li>
-           </a>
-           <a href="./about.html">
-            <li
-            class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-            About Program</li>
-           </a>
-            <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                Reviews</li>
-            <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                Pricing</li>
-            <li
-                class="hover:text-transparent bg-clip-text bg-gradient-to-r from-[#BA589F] to-[#388AEB] transition duration-500 ease-in-out cursor-pointer relative after:absolute after:block after:h-[2px] after:bg-[#388AEB] after:content-[''] after:w-0 hover:after:w-full after:transition-width after:duration-500 after:ease-in-out after:left-0 after:bottom-[-5px]">
-                Contact</li>
-        </ul>
-        <div class="log-buttons text-white flex gap-12 items-center">
-            <button
-                class="border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">Login</button>
-            <button
-                class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">Become
-                member</button>
+
+        <!-- Hidden menu for small screens -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-[#202931] text-white flex flex-col items-start p-4 space-y-4">
+            <a href="./index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">About Program</a>
+            <a href="./pricing.html" class="nav-item">Pricing</a>
+            <a href="./Courses.html" class="nav-item">Courses</a>
+            <a href="./contact.html" class="nav-item">Contact</a>
+            <a href="./login.html">
+                <button
+                    class="w-full border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Login
+                </button>
+            </a>
+            <a href="./signup.html">
+                <button
+                    class="w-full bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Become a member
+                </button>
+            </a>
         </div>
     </nav>
 
 
     <main>
-        <div class="w-[80%] mx-auto grid grid-cols-5 items-center mt-[2%] gap-10">
-            <div class="left-part flex flex-col items-start gap-5 col-span-3 animate-fadeIn">
-                <h1 class="text-[#2563EB] text-2xl font-extrabold font-sans tracking-wider uppercase">
+        <div class="w-[80%] mx-auto grid grid-cols-5 items-center lg:pt-[10%]  md:pt-[15%] sm:pt-[20%] pt-[30%] gap-10">
+            <div
+                class="left-part flex flex-col items-start gap-5 lg:col-span-3 md:col-span-2 col-span-5 animate-fadeIn">
+                <h1
+                    class="text-[#2563EB] lg:text-2xl md:text-xl text-lg font-extrabold font-sans tracking-wider uppercase">
                     Hybrid Training
                 </h1>
-                <h2 class="flex gap-2 text-3xl font-extrabold">
-                    <p class="text-white text-4xl transform hover:scale-105 transition duration-500 ease-in-out">
+                <h2 class="flex lg:gap-2 gap-1 lg:text-3xl md:text-xl text-md font-extrabold">
+                    <p
+                        class="text-white lg:text-4xl md:text-2xl text-md transform hover:scale-105 transition duration-500 ease-in-out">
                         Starting Coding Like a
                     </p>
-                    <p class="text-[#BA589F] text-4xl transform hover:scale-110 transition duration-500 ease-in-out">
+                    <p
+                        class="text-[#BA589F] lg:text-4xl md:text-2xl text-md  transform hover:scale-110 transition duration-500 ease-in-out">
                         Pro
                     </p>
                 </h2>
-                <p class="text-lg text-white w-[70%] font-mono flex leading-relaxed animate-fadeIn delay-2s">
+                <p
+                    class="lg:text-lg md:text-md text-sm text-white lg:w-[70%]  w-full font-mono flex leading-relaxed animate-fadeIn delay-2s">
                     We believe in grooming young coding enthusiasts between the ages of 15 and 18. We provide them with
                     the necessary experience before they begin their careers as proficient professionals.
                 </p>
-                <button
-                    class="bg-gradient-to-r from-[#BA589F] to-[#388AEB] rounded-xl p-3 text-white flex justify-between items-center font-bold w-[40%] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg hover:shadow-2xl">
-                    Get Started
-                    <i class="fa fa-arrow-right text-white text-thin ml-2"></i>
-                </button>
+                <a href="./signup.html"
+                    class="bg-gradient-to-r from-[#BA589F] to-[#388AEB] rounded-xl p-3 text-white flex justify-between items-center font-bold w-auto transform hover:scale-110 transition duration-500 ease-in-out shadow-lg hover:shadow-2xl">
+                    <button>
+                        Get Started
+                        <i class="fa fa-arrow-right text-white text-thin ml-2"></i>
+                    </button>
+                </a>
             </div>
-            <div class="right-part col-span-2 animate-fadeIn delay-1s">
+            <div class="right-part lg:col-span-2 md:col-span-3 col-span-5 animate-fadeIn delay-1s">
                 <img class="rounded-xl w-[100%] shadow-xl transform hover:scale-105 transition duration-500 ease-in-out"
                     src="./assets/Rectangle 28.png" alt="">
             </div>
         </div>
-        <footer class="bg-[#202931] text-white py-10">
-            <div class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- ...........................Our Features .............................................. -->
+        <section class="bg-[#202931] text-white py-16 mt-10">
+            <div class="container mx-auto text-center w-[90%] mx-auto">
+                <h2 class="lg:text-4xl md:text-2xl text-xl font-extrabold text-[#BA589F]">Our Features</h2>
+                <p class="lg:text-lg md:text-md text-sm mt-4 font-bold">Why Our Program is the Perfect Fit for You</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+
+                    <!-- Feature 1: Online Platform -->
+                    <div
+                        class="feature-item p-8 bg-[#1C1F24] border border-white rounded-xl shadow-lg hover:bg-[#1E2430] transition duration-500 ease-in-out">
+                        <img src="https://img.icons8.com/clouds/100/000000/laptop.png" alt="Online Platform Icon"
+                            class="mx-auto mb-6 lg:w-[150px]  md:w-[70px] w-[50px]  " />
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-4">Seamless Online Learning</h3>
+                        <p class="lg:text-center text-start text-gray-400 lg:text-lg md:text-md text-sm">Our platform
+                            allows students to log in with their credentials
+                            and follow courses from Monday to Friday. Each day, you can engage in lessons at your own
+                            pace. On Saturdays, we meet in person for a few hours to discuss any challenges faced during
+                            the week and to collaborate with peers.</p>
+                    </div>
+
+
+                    <!-- Feature 2: Flexible Study Schedule -->
+                    <div
+                        class="feature-item p-8 bg-[#1C1F24] rounded-xl border border-white shadow-lg hover:bg-[#1E2430] transition duration-500 ease-in-out">
+                        <img src="https://img.icons8.com/clouds/100/000000/alarm-clock.png" alt="Flexible Schedule Icon"
+                            class="mx-auto mb-6 lg:w-[150px]  md:w-[70px] w-[50px] " />
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-4">Flexible Study Hours</h3>
+                        <p class="lg:text-center text-start text-gray-400 lg:text-lg md:text-md text-sm">Our courses are
+                            designed to fit around your normal academic
+                            schedule, taking just 1-3 hours of your day. This ensures you can balance both your school
+                            studies and our program without any hassle.</p>
+                    </div>
+
+                    <!-- Feature 3: Real-World Projects -->
+                    <div
+                        class="feature-item p-8 bg-[#1C1F24] border border-white rounded-xl shadow-lg hover:bg-[#1E2430] transition duration-500 ease-in-out">
+                        <img src="https://img.icons8.com/clouds/100/000000/briefcase.png" alt="Real-World Projects Icon"
+                            class="mx-auto mb-6 lg:w-[150px]  md:w-[70px] w-[50px] " />
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-4">Real-World Projects</h3>
+                        <p class="lg:text-center text-start text-gray-400 lg:text-lg md:text-md text-sm">We collaborate
+                            with real businesses, giving our students the
+                            chance to work on actual websites and projects. This hands-on experience ensures you gain
+                            valuable skills that are directly applicable in the industry.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- .........................................................Our Testimonial ................................................................... -->
+
+        <section class="bg-[#1E1E1E] text-white py-16">
+            <div class="w-[80%] mx-auto text-center">
+                <h2 class="lg:text-4xl md:text-2xl text-xl font-extrabold text-[#BA589F]">What Our Students Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item bg-[#202931] p-8 rounded-lg shadow-lg">
+                        <p class="italic lg:text-xl md:text-lg text-start text-sm">"This program has been nothing short
+                            of transformative for my coding journey.
+                            When I first began, I had a basic understanding of coding concepts, but I lacked the
+                            confidence and practical experience to apply them effectively."</p>
+                        <hr class="my-6 border-t-0 bg-gradient-to-r from-pink-500 to-yellow-500 h-1 w-1/2">
+                        <div class="flex items-center">
+                            <img src="https://img.icons8.com/clouds/100/000000/user.png" alt="Jane Doe"
+                                class="w-16 h-16 rounded-full border-4 border-white" />
+                            <p class="ml-4 font-bold text-[#388AEB]">- Idris Scott</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-item bg-[#202931] p-8 rounded-lg shadow-lg">
+                        <p class="italic lg:text-xl md:text-lg text-start text-sm">The mentors in this program are truly
+                            exceptional. From the very beginning,
+                            they have demonstrated a deep understanding of not just the technical aspects of coding, but
+                            also the art of teaching and mentorship.</p>
+                        <hr class="my-6 border-t-0 bg-gradient-to-r from-pink-500 to-yellow-500 h-1 w-1/2">
+                        <div class="flex items-center">
+                            <img src="https://img.icons8.com/clouds/100/000000/user.png" alt="John Smith"
+                                class="w-16 h-16 rounded-full border-4 border-white" />
+                            <p class="ml-4 font-bold text-[#388AEB]">- David Dikinz</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-item bg-[#202931] p-8 rounded-lg shadow-lg">
+                        <p class="italic lg:text-xl md:text-lg text-start text-sm">"Participating in this program has
+                            been a truly life-changing experience that
+                            has profoundly prepared me for my career. When I began, I had a vision of where I wanted to
+                            go, but I lacked the practical skills and industry insights needed to navigate the path
+                            effectively."</p>
+                        <hr class="my-6 border-t-0 bg-gradient-to-r from-pink-500 to-yellow-500 h-1 w-1/2">
+                        <div class="flex items-center">
+                            <img src="https://img.icons8.com/clouds/100/000000/user.png" alt="Emily Johnson"
+                                class="w-16 h-16 rounded-full border-4 border-white" />
+                            <p class="ml-4 font-bold text-[#388AEB]">- Chloe Uwase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ................................................................Call to Action........................................................ -->
+        <section class="bg-[#202931] text-white py-16">
+            <div class="w-[80%] mx-auto text-center flex flex-col items-center gap-2">
+                <h2 class="lg:text-3xl md:text-xl text- lg font-extrabold">Ready to Start Your Coding Journey?</h2>
+                <p
+                    class="lg:text-lg md:text-md text-sm md:text-xl mb-8 px-4 md:px-0 lg:w-[60%] md:w-[80%] w-[95%] text-start">
+                    Dive into a world of innovation and opportunity.
+                    Connect with expert mentors, engage in hands-on projects, and transform your future. Embark on this
+                    journey with us and make a lasting impact in the tech industry!</p>
+                <a href="./signup.html">
+                    <button
+                        class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                        Sign Up Now
+                    </button>
+                </a>
+            </div>
+        </section>
+        <!-- ...........................................................Project Section................................................... -->
+
+        <section class="bg-[#1E1E1E] text-white py-20">
+            <div class="w-[80%] mx-auto">
+                <h2 class="text-center lg:text-4xl md:text-2xl text-xl font-extrabold text-[#BA589F] mb-12">Showcase of
+                    Our Student Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+                    <!-- Project 1 -->
+                    <div
+                        class="project-card p-6 bg-[#202931] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/ecobazar.png" alt="Ecobazar Project Screenshot"
+                            class="rounded-t-lg mb-4 w-full  object-cover">
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-2">Ecobazar</h3>
+                        <p class="text-base mb-4 lg:text-lg md:text-md text-sm">Ecobazar is an e-commerce website for
+                            fruits and vegetables. This
+                            project provided our students with valuable experience in developing and managing an online
+                            marketplace. They worked on building a user-friendly interface, ensuring seamless
+                            navigation, and integrating secure payment gateways.</p>
+                        <a href="https://www.loom.com/share/d9595285e0a748549200c69c572c8123?sid=e2f6c8f7-6754-42b7-ad04-31005d8e1bc1"
+                            target="_blank"
+                            class="inline-block lg:px-6 md:px-4 px-2 lg:py-2 py-1 lg:text-lg md:text-md text-sm bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">Watch
+                            on Loom</a>
+                    </div>
+                    <!-- Project 2 -->
+                    <div
+                        class="project-card p-6 bg-[#202931] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/carrental.png" alt="Car Rental Project Screenshot"
+                            class="rounded-t-lg mb-4 w-full  object-cover">
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-2">Car Rental</h3>
+                        <p class="text-base mb-4 lg:text-lg md:text-md text-sm">The Car Rental project offers a
+                            comprehensive platform for managing
+                            vehicle rentals. Our students gained hands-on experience in building and managing a rental
+                            system. This project involved creating a robust backend to handle customer bookings,
+                            inventory management, and payment processing. </p>
+                        <a href="https://www.loom.com/share/ea202965ef9a409581b16c7f59983aee?sid=bf21f888-2038-4447-b834-b96d2178f94b"
+                            target="_blank"
+                            class="inline-block lg:px-6 md:px-4 px-2 lg:py-2 py-1 lg:text-lg md:text-md text-sm bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">Watch
+                            on Loom</a>
+                    </div>
+                    <!-- Project 3 -->
+                    <div
+                        class="project-card p-6 bg-[#202931] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/silva.png" alt="Silva Gym Project Screenshot"
+                            class="rounded-t-lg mb-4 w-full  object-cover">
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-2">Silva Gym</h3>
+                        <p class="text-base mb-4 lg:text-lg md:text-md text-sm"> Silva Gym is a project designed for a
+                            gym located in Kigali, KBS
+                            building. This project allowed students to apply their skills in developing a comprehensive
+                            gym management system. The system includes features like membership management, class
+                            scheduling, and progress tracking.</p>
+                        <a href="https://www.loom.com/share/9721fc7f211e4fa98a07f9795cfa5e05?sid=703d318b-1f33-4fa6-8211-1c493c6081e3"
+                            target="_blank"
+                            class="inline-block lg:px-6 md:px-4 px-2 lg:py-2 py-1 lg:text-lg md:text-md text-sm bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">Watch
+                            on Loom</a>
+                    </div>
+                    <!-- Project 4 -->
+                    <div
+                        class="project-card p-6 bg-[#202931] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/bunz.png" alt="Bunz Restaurant Project Screenshot"
+                            class="rounded-t-lg mb-4 w-full object-cover">
+                        <h3 class="lg:text-2xl md:text-xl text-lg font-bold mb-2">Bunz</h3>
+                        <p class="text-base mb-4 lg:text-lg md:text-md text-sm">Bunz is a restaurant project that
+                            showcases the creative and technical
+                            skills of our students. Located in Kigali, the project involved designing a modern and
+                            user-friendly website to enhance the restaurant's online presence, providing customers with
+                            an intuitive browsing and ordering experience.</p>
+                        <a href="https://www.loom.com/share/45a3a7ab91e74d5a8cbaf957d26af815?sid=9842cef9-7c91-464a-9822-b4acc9899087"
+                            target="_blank"
+                            class="inline-block lg:px-6 md:px-4 px-2 lg:py-2 py-1 lg:text-lg md:text-md text-sm bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">Watch
+                            on Loom</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-[#202931] text-white py-20">
+            <div class="w-[80%] mx-auto">
+                <h2 class="text-center lg:text-4xl md:text-2xl text-xl font-extrabold text-[#BA589F] mb-12">Meet Our
+                    Team</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Team Member 1 -->
+                    <div
+                        class="col-span-1 p-6 bg-[#1E1E1E] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/david.jfif" alt="David Ngarambe"
+                            class="rounded-full lg:w-[120px] w-[90px] sm:w-[80px] mx-auto border-4 border-[#BA589F] mb-4">
+                        <h3 class="lg:text-2xl md:text-xl sm:text-lg text-md font-bold mb-2 text-center">David Ngarambe
+                        </h3>
+                        <p class="text-sm lg:text-lg md:text-md sm:text-base text-sm mb-4 text-center">Co-founder</p>
+                        <div class="text-center">
+                            <a href="https://www.linkedin.com/in/ngarambe-david-4895612bb/" target="_blank"
+                                class="inline-block px-4 py-2 bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div
+                        class="col-span-1 p-6 bg-[#1E1E1E] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/isma.jfif" alt="Ismail Munyentwari"
+                            class="rounded-full lg:w-[120px] w-[90px] sm:w-[80px] mx-auto border-4 border-[#BA589F] mb-4">
+                        <h3 class="lg:text-2xl md:text-xl sm:text-lg text-md font-bold mb-2 text-center">Ismail
+                            Munyentwari</h3>
+                        <p class="text-sm lg:text-lg md:text-md sm:text-base text-sm mb-4 text-center">Co-founder</p>
+                        <div class="text-center">
+                            <a href="https://www.linkedin.com/in/munyentwari-ismail/" target="_blank"
+                                class="inline-block px-4 py-2 bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div
+                        class="col-span-1 p-6 bg-[#1E1E1E] rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+                        <img src="./assets/kwizera.jpeg" alt="Kwizera Emmanuel"
+                            class="rounded-full lg:w-[120px] w-[90px] sm:w-[80px] mx-auto border-4 border-[#BA589F] mb-4">
+                        <h3 class="lg:text-2xl md:text-xl sm:text-lg text-md font-bold mb-2 text-center">Kwizera
+                            Emmanuel</h3>
+                        <p class="text-sm lg:text-lg md:text-md sm:text-base text-sm mb-4 text-center">Software Lecturer
+                        </p>
+                        <div class="text-center">
+                            <a href="https://www.linkedin.com/in/emmanuel-kwizera/" target="_blank"
+                                class="inline-block px-4 py-2 bg-[#BA589F] text-white font-semibold rounded hover:bg-[#a14e8b] transition duration-300 ease-in-out">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- -----------------------------------Frequently Asked Questions-------------------------------------------- -->
+        <section class="bg-[#202931] text-white py-20">
+            <div class="w-[90%] md:w-[80%] mx-auto">
+                <h2 class="text-center text-xl md:text-2xl lg:text-4xl font-extrabold text-[#BA589F] mb-12">
+                    Frequently Asked Questions
+                </h2>
+                <div class="space-y-10">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item p-4 md:p-6 bg-[#1E1E1E] rounded-lg shadow-lg">
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 cursor-pointer flex justify-between items-center"
+                            onclick="toggleFaq(1)">
+                            What is the duration of the program?
+                            <span class="transform transition-transform duration-500" id="arrow1">▼</span>
+                        </h3>
+                        <p id="faq1" class="text-base hidden md:w-[90%] lg:w-[80%]">The program lasts for 9 months,
+                            divided into
+                            three levels. The first 3 months are for beginners, followed by 3 months at the intermediate
+                            level,
+                            and the final 3 months for advanced learners. By the end of the 9 months, participants will
+                            have the
+                            skills to become full-stack developers.</p>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item p-4 md:p-6 bg-[#1E1E1E] rounded-lg shadow-lg">
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 cursor-pointer flex justify-between items-center"
+                            onclick="toggleFaq(2)">
+                            Do I need any prior experience?
+                            <span class="transform transition-transform duration-500" id="arrow2">▼</span>
+                        </h3>
+                        <p id="faq2" class="text-base hidden md:w-[90%] lg:w-[80%]">No prior coding experience is
+                            necessary. Our
+                            curriculum is designed to take you from a beginner to a proficient coder, starting from the
+                            very
+                            basics. We provide all the resources and guidance you need to succeed, regardless of your
+                            starting
+                            point.</p>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item p-4 md:p-6 bg-[#1E1E1E] rounded-lg shadow-lg">
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 cursor-pointer flex justify-between items-center"
+                            onclick="toggleFaq(3)">
+                            How do I apply?
+                            <span class="transform transition-transform duration-500" id="arrow3">▼</span>
+                        </h3>
+                        <p id="faq3" class="text-base hidden md:w-[90%] lg:w-[80%]">You can apply through our website by
+                            filling
+                            out the application form with all the necessary information. Once your application is
+                            submitted, our
+                            team will review it, and you will be contacted via phone or email with the next steps. Just
+                            complete
+                            the form and wait for our team to get in touch with you.</p>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item p-4 md:p-6 bg-[#1E1E1E] rounded-lg shadow-lg">
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 cursor-pointer flex justify-between items-center"
+                            onclick="toggleFaq(4)">
+                            What will I learn in this program?
+                            <span class="transform transition-transform duration-500" id="arrow4">▼</span>
+                        </h3>
+                        <p id="faq4" class="text-base hidden md:w-[90%] lg:w-[80%]">Our program covers a wide range of
+                            topics,
+                            from basic HTML and CSS to advanced JavaScript, front-end frameworks, and responsive design.
+                            You
+                            will also learn about version control with Git, project management, and how to collaborate
+                            effectively in a team setting.</p>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item p-4 md:p-6 bg-[#1E1E1E] rounded-lg shadow-lg">
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 cursor-pointer flex justify-between items-center"
+                            onclick="toggleFaq(5)">
+                            What kind of support can I expect during the program?
+                            <span class="transform transition-transform duration-500" id="arrow5">▼</span>
+                        </h3>
+                        <p id="faq5" class="text-base hidden md:w-[90%] lg:w-[80%]">Throughout the program, you will
+                            receive
+                            continuous support from our instructors and mentors. This includes personalized feedback on
+                            your
+                            projects, one-on-one mentoring sessions, and access to a supportive community of peers. Our
+                            goal is
+                            to help you succeed at every step of your learning journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- <section class="bg-[#202931] text-white py-16">
+            <div class="w-[80%] mx-auto text-center">
+                <h2 class="text-3xl font-extrabold text-[#BA589F]">Our Partners</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+                    <img src="path_to_partner_logo1.png" alt="Partner 1"
+                        class="mx-auto transform hover:scale-105 transition duration-500 ease-in-out">
+                    <img src="path_to_partner_logo2.png" alt="Partner 2"
+                        class="mx-auto transform hover:scale-105 transition duration-500 ease-in-out">
+                    <img src="path_to_partner_logo3.png" alt="Partner 3"
+                        class="mx-auto transform hover:scale-105 transition duration-500 ease-in-out">
+                    <img src="path_to_partner_logo4.png" alt="Partner 4"
+                        class="mx-auto transform hover:scale-105 transition duration-500 ease-in-out">
+                </div>
+            </div>
+        </section> -->
+
+
+
+
+
+
+        <footer class="bg-[#141B22] text-white py-10">
+            <div class="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Contact Information -->
-                <div class="contact-info flex flex-col gap-3">
-                    <h3 class="text-[#BA589F] text-xl font-bold">Contact Information</h3>
-                    <p>Norsken House, KG 19 Ave, Kigali, Rwanda</p>
-                    <p>+250 791 430 175</p>
-                    <p>info@techtonicafrica.com</p>
+                <div class="contact-info flex flex-col gap-1">
+                    <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Contact Information</h3>
+                    <p class="text-sm md:text-base">Norsken House, KG 19 Ave, Kigali, Rwanda</p>
+                    <p class="text-sm md:text-base">+250 791 430 175</p>
+                    <p class="text-sm md:text-base">info@techtonicafrica.com</p>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="quick-links flex flex-col gap-3">
-                    <h3 class="text-[#BA589F] text-xl font-bold">Quick Links</h3>
+                    <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Home</a></li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">About
-                                Program</a></li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Reviews</a>
-                        </li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Pricing</a>
-                        </li>
-                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out"><a href="#">Contact</a>
-                        </li>
+                    <a href="./index.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Home</li></a>
+                    <a href="./about.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">About Program</li></a>
+                    <a href="./pricing.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Pricing</li></a>
+                    <a href="./courses.html"><li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Courses</li></a>
+                    <a href="./contact.html"> <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Contact</li></a>
                     </ul>
                 </div>
 
                 <!-- Follow Us -->
                 <div class="follow-us flex flex-col gap-3">
-                    <h3 class="text-[#BA589F] text-xl font-bold">Socials</h3>
+                    <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Socials</h3>
                     <div class="social-icons flex space-x-4">
-                        <a href="#" class=" text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <a href="#"
+                            class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
                             <i class="fa fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <a href="#"
+                            class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
                             <i class="fa fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <a href="https://www.instagram.com/techtonicafrica/"
+                            class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
                             <i class="fa fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <a href="#"
+                            class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </div>
                 </div>
             </div>
+
             <!-- Copyright -->
-            <div class="text-center text-sm mt-10 text-gray-400">
+            <div class="text-center text-xs md:text-sm lg:text-base mt-10 text-gray-400">
                 © 2024 Tech Tonic Africa. All rights reserved.
             </div>
         </footer>
 
-    </main>
 
+    </main>
+    <script>
+        function toggleFaq(faqId) {
+            const faq = document.getElementById(`faq${faqId}`);
+            const arrow = document.getElementById(`arrow${faqId}`);
+            faq.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+    </script>
+    <script src="./menu.js"></script>
 </body>
 
 </html>

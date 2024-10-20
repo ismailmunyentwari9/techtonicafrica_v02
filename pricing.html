@@ -1,0 +1,277 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Pricing</title>
+</head>
+
+<body class="bg-[#1E1E1E]">
+    <!-- Navbar -->
+    <nav class="w-full bg-[#202931] shadow-lg fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="logo transform hover:scale-110 transition duration-500 ease-in-out">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="Logo" class="hover:rotate-6 transition duration-500 ease-in-out">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon for Mobile -->
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <div id="menu" class="lg:flex hidden flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                <ul class="text-white flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
+                    <li><a href="./index.html" class="nav-item">Home</a></li>
+                    <li><a href="./about.html" class="nav-item">About Program</a></li>
+                    <li><a href="./pricing.html" class="nav-item">Pricing</a></li>
+                    <li><a href="./Courses.html" class="nav-item">Courses</a></li>
+                    <li><a href="./contact.html" class="nav-item">Contact</a></li>
+                </ul>
+                <div class="log-buttons text-white flex gap-6 lg:gap-12 items-center mt-4 lg:mt-0">
+                    <a href="./login.html">
+                        <button
+                            class="border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Login
+                        </button>
+                    </a>
+                    <a href="./signup.html">
+                        <button
+                            class="bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                            Become a member
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden menu for small screens -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-[#202931] text-white flex flex-col items-start p-4 space-y-4">
+            <a href="./index.html" class="nav-item">Home</a>
+            <a href="./about.html" class="nav-item">About Program</a>
+            <a href="./pricing.html" class="nav-item">Pricing</a>
+            <a href="./Courses.html" class="nav-item">Courses</a>
+            <a href="./contact.html" class="nav-item">Contact</a>
+            <a href="./login.html">
+                <button
+                    class="w-full border border-solid px-5 py-2 rounded-lg border-[#388AEB] hover:bg-[#388AEB] hover:text-[#202931] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Login
+                </button>
+            </a>
+            <a href="./signup.html">
+                <button
+                    class="w-full bg-[#BA589F] p-1 px-6 rounded-lg hover:bg-[#202931] hover:border hover:border-[#BA589F] transform hover:scale-110 transition duration-500 ease-in-out shadow-lg">
+                    Become a member
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section
+            class="lg:pt-[10%]  md:pt-[15%] sm:pt-[20%] pt-[30%] w-full mx-auto flex flex-col items-center justify-center text-center py-24 bg-cover bg-center relative shadow-lg"
+            style="background-image: url('./assets/bg-about.webp');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 flex justify-center flex-col items-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-extrabold mb-4 animate-bounce">Our Pricing
+                    Plans</h1>
+                <p class="text-lg md:text-xl text-white mb-8 w-[90%] md:w-[80%] lg:w-[60%]">
+                    Flexible plans to suit your needs. Whether you're just starting your journey or looking to advance
+                    your skills, we offer customized solutions tailored to meet your specific goals. Our pricing plans
+                    are designed to provide you with the best value, ensuring you have access to the resources, support,
+                    and tools you need to succeed at every stage of your development. Choose a plan that aligns with
+                    your aspirations, and start transforming your potential into reality today.
+                </p>
+                <a href="#pricing"
+                    class="text-md md:text-lg bg-[#BA589F] text-white py-2 md:py-3 px-6 md:px-8 rounded-lg hover:bg-white hover:text-[#BA589F] transition-all duration-300">View
+                    Plans</a>
+            </div>
+        </section>
+
+
+        <section class="pricing-table w-[90%] mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Basic Plan -->
+            <div
+                class="bg-[#202931] text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 ease-in-out relative">
+                <h2 class="text-2xl font-bold text-[#BA589F] mb-4">Basic Plan</h2>
+                <p class="text-lg mb-6">For those who Can't afford 150,000Rwf/3months</p>
+                <p class="text-4xl font-bold mb-6">50,000Rwf/<span class="text-sm">month</span></p>
+                <p class="text-lg mb-6">or <span class="text-xl font-bold">150,000Rwf</span> for 3 months</p>
+                <p class="text-sm italic mb-6">*Requires signing a payment agreement</p>
+                <ul class="mb-6 space-y-4">
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Access to our online platform
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Community support
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>1-on-1 mentorship
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Access to exclusive webinars
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Exclusive resources and tools
+                    </li>
+                </ul>
+                <a href="./signup.html"
+                    class="bg-[#BA589F] py-2 px-6 rounded-lg inline-block mt-4 hover:bg-[#202931] hover:border hover:border-[#BA589F]">Get
+                    Started</a>
+            </div>
+        
+            <!-- Premium Plan -->
+            <div
+                class="bg-[#202931] text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">
+                <h2 class="text-2xl font-bold text-[#BA589F] mb-4">Premium Plan</h2>
+                <p class="text-lg mb-6">For those who want it all</p>
+                <p class="text-4xl font-bold mb-6">450,000<span class="text-sm">Rwf</span></p>
+                <p class="text-lg mb-6">for 9 months (Full Program)</p>
+                <ul class="mb-6 space-y-4">
+                    
+                    <li class="flex items-center">
+                        <i class="fa fa-times-circle-o text-blue-500 mr-2"></i>Access to special events and workshops
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-times-circle-o text-blue-500 mr-2"></i>Exclusive networking opportunities
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Access to our online platform
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Community support
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>1-on-1 mentorship
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Access to exclusive webinars
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Exclusive resources and tools
+                    </li>
+                </ul>
+                <a href="./signup.html"
+                    class="bg-[#BA589F] py-2 px-6 rounded-lg inline-block mt-4 hover:bg-[#202931] hover:border hover:border-[#BA589F]">Get
+                    Started</a>
+            </div>
+        
+            <!-- Pro Plan -->
+            <div
+                class="bg-[#202931] text-white p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">
+                <div class="absolute top-4 right-4 bg-[#BA589F] text-xs text-white px-2 py-1 rounded-full">Most Popular
+                </div>
+                <h2 class="text-2xl font-bold text-[#BA589F] mb-4">Pro Plan</h2>
+                <p class="text-lg mb-6">Perfect for Everyone</p>
+                <p class="text-4xl font-bold mb-6">150,000<span class="text-sm">Rwf</span></p>
+                <p class="text-lg mb-6">for 3 months</p>
+                <ul class="mb-6 space-y-4">
+                    <li class="flex items-center">
+                        <i class="fa fa-times-circle-o text-blue-500 mr-2"></i>Exclusive networking opportunities
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Access to our online platform
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Community support
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>1-on-1 mentorship
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Access to exclusive webinars
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa fa-check-circle-o text-[#BA589F] mr-2"></i>Exclusive resources and tools
+                    </li>
+                </ul>
+                <a href="./signup.html"
+                    class="bg-[#BA589F] py-2 px-6 rounded-lg inline-block mt-4 hover:bg-[#202931] hover:border hover:border-[#BA589F]">Get
+                    Started</a>
+            </div>
+        </section>
+        
+    </main>
+
+
+
+    <footer class="bg-[#141B22] text-white py-10">
+        <div class="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Contact Information -->
+            <div class="contact-info flex flex-col gap-1">
+                <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Contact Information</h3>
+                <p class="text-sm md:text-base">Norsken House, KG 19 Ave, Kigali, Rwanda</p>
+                <p class="text-sm md:text-base">+250 791 430 175</p>
+                <p class="text-sm md:text-base">info@techtonicafrica.com</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links flex flex-col gap-3">
+                <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <a href="./index.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Home</li>
+                    </a>
+                    <a href="./about.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">About Program</li>
+                    </a>
+                    <a href="./pricing.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Pricing</li>
+                    </a>
+                    <a href="./courses.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Courses</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li class="hover:text-[#388AEB] transition duration-300 ease-in-out">Contact</li>
+                    </a>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="follow-us flex flex-col gap-3">
+                <h3 class="text-[#BA589F] text-lg md:text-xl font-bold">Socials</h3>
+                <div class="social-icons flex space-x-4">
+                    <a href="#"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/techtonicafrica/"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="text-2xl md:text-3xl lg:text-[45px] hover:text-[#388AEB] transition duration-300 ease-in-out">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-xs md:text-sm lg:text-base mt-10 text-gray-400">
+            © 2024 Tech Tonic Africa. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="./menu.js"></script>
+</body>
+
+</html>
