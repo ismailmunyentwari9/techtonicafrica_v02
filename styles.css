@@ -1,0 +1,38 @@
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your custom styles go here */
+ 
+
+/* Your custom styles go here */
+
+*{
+    font-family: Sofia Pro;
+    padding: 0px;
+    margin: 0px;
+}
+.slide-right{
+    background-image: url('./assets/decoration.png');
+    background-size: cover;
+    background-position-y:-30%;
+    background-repeat: no-repeat;
+
+}
+
+.upper-section{
+background:linear-gradient(to right,rgba(12, 129, 225, 0.98),rgba(168, 172, 224, 0.1)),url('./assets//techGirls.jpg');
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 23%;
+}
+.payments{
+  background-image: url('./assets/decoration.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+}
